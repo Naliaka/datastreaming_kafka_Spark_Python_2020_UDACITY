@@ -6,7 +6,7 @@ The material and projects for Udacity Data Streaming Nanodegree contains the exe
 PART 1: [Data Ingestion with Kafka & Kafka Streaming](https://github.com/Naliaka/datastreaming_nanodegree_2020_UDACITY/tree/main/2.%20Data%20Ingestion%20with%20Kafka%20%26%20Kafka%20Streaming]")
 
 
-PART 2: [Streaming API Development and Documentation](https://github.com/Naliaka/datastreaming_nanodegree_2020_UDACITY/tree/main/2.%20Data%20Ingestion%20with%20Kafka%20%26%20Kafka%20Streaming]")
+PART 2: [Streaming API Development and Documentation](https://github.com/Naliaka/datastreaming_nanodegree_2020_UDACITY/tree/main/3.%20Apache%20Spark%20and%20Spark%20Streaming]")
 
 ## Project
 
