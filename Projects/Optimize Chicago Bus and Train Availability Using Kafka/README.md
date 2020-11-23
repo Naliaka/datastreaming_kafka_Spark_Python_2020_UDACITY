@@ -4,6 +4,7 @@ In this project, you will construct a streaming event pipeline around Apache Kaf
 
 When the project is complete, you will be able to monitor a website to watch trains move from station to station. So a sample static view of the website page you create might look like this:
 
+![](images/ui.JPG)
 
 ## Project
 
