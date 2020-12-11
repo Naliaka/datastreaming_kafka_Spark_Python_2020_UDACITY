@@ -9,6 +9,9 @@ from confluent_kafka.avro import AvroProducer
 
 logger = logging.getLogger(__name__)
 
+BROKER_URL = "PLAINTEXT://localhost:9092"
+SCHEMA_REGISTRY_URL = "http://localhost:8081"
+
 
 class Producer:
     """Defines and provides common functionality amongst Producers"""
@@ -34,16 +37,20 @@ class Producer:
             "bootstrap.servers": BROKER_URL,
             "schema.registry.url": SCHEMA_REGISTRY_URL
         }
+
         # If the topic does not already exist, try to create it
         if self.topic_name not in Producer.existing_topics:
             self.create_topic()
             Producer.existing_topics.add(self.topic_name)
+
         self.producer = AvroProducer(
             self.broker_properties,
             default_key_schema=key_schema,
-            default_value_schema=value_schema,            
+            default_value_schema=value_schema,
+            
         )
-        def topic_exists(self, client):
+
+    def topic_exists(self, client):
         """Checks if the given topic exists"""
         topic_metadata = client.list_topics(timeout=5)
         return topic_metadata.topics.get(self.topic_name) is not None
@@ -52,7 +59,8 @@ class Producer:
         """Creates the producer topic if it does not already exist"""
         client = AdminClient({'bootstrap.servers':BROKER_URL})
         exists = self.topic_exists(client)
-        logger.info(f"Topic {self.topic_name} exists: {exists}")        
+        logger.info(f"Topic {self.topic_name} exists: {exists}")
+        
         if not exists:
             futures = client.create_topics(
                 [NewTopic(topic=self.topic_name,  num_partitions=self.num_partitions, replication_factor=self.num_replicas)])
@@ -64,6 +72,8 @@ class Producer:
                 except Exception as e:
                     logger.error(f"failed to create topic {self.topic_name}: {e}")
                     raise
+
+
     def time_millis(self):
         return int(round(time.time() * 1000))
 
@@ -76,5 +86,3 @@ class Producer:
     def time_millis(self):
         """Use this function to get the key for Kafka Events"""
         return int(round(time.time() * 1000))
-
-        
