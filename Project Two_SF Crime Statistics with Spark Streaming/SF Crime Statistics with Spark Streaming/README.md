@@ -93,7 +93,7 @@ How did changing values on the SparkSession property parameters affect the throu
 ## Question 2
 What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 
-In Spark  [Configuration Documentation](http://spark.apache.org/docs/latest/configuration.html#viewing-spark-properties)I tuned some of the parameters:
+In Spark  [Configuration Documentation](http://spark.apache.org/docs/latest/configuration.html#viewing-spark-properties) I tuned some of the parameters:
  
 
 spark.executor.memory: Amount of memory to use per executor process spark.executor.cores: The number of cores to use on each executor spark.default.parallelism : 100
