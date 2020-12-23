@@ -74,16 +74,16 @@ Step 2. Submit Spark Streaming Job :
 
 ### Example Kafka Consumer Console Output
 
-![Example Kafka Consumer Console Output](datastreaming_nanodegree_2020_UDACITY\Project Two_SF Crime Statistics with Spark Streaming\SF Crime Statistics with Spark Streaming/Example Kafka Consumer Console Output.JPG)
+![Example Kafka Consumer Console Output](https://github.com/Naliaka/datastreaming_nanodegree_2020_UDACITY/blob/main/Project%20Two_SF%20Crime%20Statistics%20with%20Spark%20Streaming/SF%20Crime%20Statistics%20with%20Spark%20Streaming/Example%20Kafka%20Consumer%20Console%20Output.JPG)
 
 
 ### Progress Reporter
 
-![Progress Reporter](datastreaming_nanodegree_2020_UDACITY\Project Two_SF Crime Statistics with Spark Streaming\SF Crime Statistics with Spark Streaming/Progress Reporter.JPG)
+![Progress Reporter](https://github.com/Naliaka/datastreaming_nanodegree_2020_UDACITY/blob/main/Project%20Two_SF%20Crime%20Statistics%20with%20Spark%20Streaming/SF%20Crime%20Statistics%20with%20Spark%20Streaming/Progress%20Reporter.JPG)
 
 ### Spark UI
 
-![Spark UI](datastreaming_nanodegree_2020_UDACITY\Project Two_SF Crime Statistics with Spark Streaming\SF Crime Statistics with Spark Streaming/Spark UI.JPG)
+![Spark UI](https://github.com/Naliaka/datastreaming_nanodegree_2020_UDACITY/blob/main/Project%20Two_SF%20Crime%20Statistics%20with%20Spark%20Streaming/SF%20Crime%20Statistics%20with%20Spark%20Streaming/Spark%20UI.JPG)
 
 ## Question 1
 How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
@@ -93,8 +93,8 @@ How did changing values on the SparkSession property parameters affect the throu
 ## Question 2
 What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 
-In Spark Configuration Documentation I tuned some of the parameters:
-[Configuration Documentation](http://spark.apache.org/docs/latest/configuration.html#viewing-spark-properties) 
+In Spark  [Configuration Documentation](http://spark.apache.org/docs/latest/configuration.html#viewing-spark-properties)I tuned some of the parameters:
+ 
 
 spark.executor.memory: Amount of memory to use per executor process spark.executor.cores: The number of cores to use on each executor spark.default.parallelism : 100
 
