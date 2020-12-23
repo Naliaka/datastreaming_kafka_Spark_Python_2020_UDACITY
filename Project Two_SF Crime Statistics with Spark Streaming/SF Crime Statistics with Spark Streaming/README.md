@@ -66,27 +66,39 @@ Modify the zookeeper.properties and producer.properties given to suit your topic
 
 ### Step 1.3  Run Kafka consumer to test if Kafka Producer is correctly implemented and producing data
 
-Option 1: /usr/bin/kafka-console-consumer --topic "topic-name" --from-beginning --bootstrap-server localhost:9092 
-Option 2: python consumer_server.py
+Option 1: `/usr/bin/kafka-console-consumer --topic "topic-name" --from-beginning --bootstrap-server localhost:9092` 
+
 
 Step 2. Submit Spark Streaming Job :
-spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py
+`spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py`
 
 ### Example Kafka Consumer Console Output
 
-![Example Kafka Consumer Console Output](Example Kafka Consumer Console Output.JPG)
+![Example Kafka Consumer Console Output](datastreaming_nanodegree_2020_UDACITY\Project Two_SF Crime Statistics with Spark Streaming\SF Crime Statistics with Spark Streaming/Example Kafka Consumer Console Output.JPG)
 
 
 ### Progress Reporter
 
-![Progress Reporter](Progress Reporter.JPG)
+![Progress Reporter](datastreaming_nanodegree_2020_UDACITY\Project Two_SF Crime Statistics with Spark Streaming\SF Crime Statistics with Spark Streaming/Progress Reporter.JPG)
 
 ### Spark UI
+
+![Spark UI](datastreaming_nanodegree_2020_UDACITY\Project Two_SF Crime Statistics with Spark Streaming\SF Crime Statistics with Spark Streaming/Spark UI.JPG)
 
 ## Question 1
 How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
 
+* it increased or decrease processRowsPersecond throughput and it was reflected on the total time to execute the Jobs
+
 ## Question 2
 What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 
+In Spark Configuration Documentation I tuned some of the parameters:
+[Configuration Documentation](http://spark.apache.org/docs/latest/configuration.html#viewing-spark-properties) 
+
+spark.executor.memory: Amount of memory to use per executor process spark.executor.cores: The number of cores to use on each executor spark.default.parallelism : 100
+
+`spark.executor.memory = 3g` 
+`spark.executor.cores = 3g`                
+`spark.default.parallelism : 100`
 
