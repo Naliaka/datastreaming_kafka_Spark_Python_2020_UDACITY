@@ -74,12 +74,12 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --maste
 
 ### Example Kafka Consumer Console Output
 
-![Example Kafka Consumer Console Output](SF Crime Statistics with Spark Streaming/Example Kafka Consumer Console Output.jpg)
+![Example Kafka Consumer Console Output](Example Kafka Consumer Console Output.JPG)
 
 
 ### Progress Reporter
 
-![Progress Reporter](SF Crime Statistics with Spark Streaming/Progress Reporter.jpg)
+![Progress Reporter](Progress Reporter.JPG)
 
 ### Spark UI
 
